@@ -1,0 +1,36 @@
+PROCESO A OPTIMIZAR: CONCILIACIÓN DE TRANSFERENCIAS INTERNACIONALES
+
+Actualmente trabajo en el área de conciliaciones bancarias y uno de los procesos más lentos es la conciliación manual de transferencias internacionales recibidas y enviadas entre diferentes bancos corresponsales.
+Este proceso es realizado por analistas de conciliaciones.
+Los usuarios afectados son los analistas operativos y las áreas que esperan la confirmación de pagos.
+Diariamente se procesan entre 500 y 1.000 registros provenientes de extractos bancarios y reportes internos.
+Los datos incluyen fecha, referencia SWIFT, banco origen, banco destino, moneda, monto y estado.
+Hoy la revisión se realiza manualmente comparando extractos y reportes exportados a Excel.
+La búsqueda de diferencias puede tardar entre 2 y 4 horas por jornada.
+Los errores más comunes son referencias incompletas, montos diferentes o registros duplicados.
+El objetivo es automatizar la comparación de registros para reducir tiempos y errores.
+Se espera disminuir el tiempo de conciliación a menos de 30 minutos diarios.
+
+MUESTRA DE DATOS REALES (FORMATO DE EJEMPLO)
+
+Fecha       | Referencia     | Banco Origen     | Banco Destino    | Moneda | Monto   | Estado
+2026-11-01  | SWF000001      | Banco Pichincha  | CaixaBank        | USD    | 1500.50 | Conciliado
+2026-11-01  | SWF000002      | Banco do Brasil  | Banco Pichincha  | USD    | 2350.00 | Pendiente
+2026-11-01  | SWF000003      | CaixaBank        | Banco Pichincha  | EUR    | 890.45  | Conciliado
+2026-11-01  | SWF000004      | Banco Pichincha  | Banco do Brasil  | USD    | 760.30  | Pendiente
+2026-11-01  | SWF000005      | Banco Pichincha  | CaixaBank        | USD    | 1200.00 | Conciliado
+2026-11-02  | SWF000006      | Banco do Brasil  | Banco Pichincha  | USD    | 3540.80 | Conciliado
+2026-11-02  | SWF000007      | CaixaBank        | Banco Pichincha  | EUR    | 620.25  | Pendiente
+2026-11-02  | SWF000008      | Banco Pichincha  | CaixaBank        | USD    | 980.75  | Conciliado
+2026-11-02  | SWF000009      | Banco do Brasil  | Banco Pichincha  | USD    | 1800.00 | Conciliado
+2026-11-02  | SWF000010      | Banco Pichincha  | CaixaBank        | USD    | 2475.10 | Pendiente
+2026-11-03  | SWF000011      | CaixaBank        | Banco Pichincha  | EUR    | 510.00  | Conciliado
+2026-11-03  | SWF000012      | Banco Pichincha  | Banco do Brasil  | USD    | 3340.50 | Pendiente
+2026-11-03  | SWF000013      | Banco do Brasil  | Banco Pichincha  | USD    | 1700.75 | Conciliado
+2026-11-03  | SWF000014      | Banco Pichincha  | CaixaBank        | USD    | 2950.00 | Conciliado
+2026-11-03  | SWF000015      | CaixaBank        | Banco Pichincha  | EUR    | 430.25  | Pendiente
+2026-11-04  | SWF000016      | Banco Pichincha  | CaixaBank        | USD    | 860.45  | Conciliado
+2026-11-04  | SWF000017      | Banco do Brasil  | Banco Pichincha  | USD    | 1425.60 | Pendiente
+2026-11-04  | SWF000018      | Banco Pichincha  | Banco do Brasil  | USD    | 3780.00 | Conciliado
+2026-11-04  | SWF000019      | CaixaBank        | Banco Pichincha  | EUR    | 990.15  | Conciliado
+2026-11-04  | SWF000020      | Banco Pichincha  | CaixaBank        | USD    | 1105.30 | Pendiente
