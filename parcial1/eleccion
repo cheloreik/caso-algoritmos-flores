@@ -3,3 +3,26 @@
 // La función HayRepetidosPorPares es CORRECTA pero LENTA. Tu trabajo: analizarla, CURARLA (escribir una
 // versión que cueste menos), medir las dos y elegir. Puedes usar este archivo tal cual (si tienes .NET)
 // o portar todo a TU lenguaje.
+
+
+repetido en el medio      esperado True  · por pares True  · tu cura True
+sin repetidos            esperado False · por pares False · tu cura False
+lista vacía              esperado False · por pares False · tu cura False
+un solo elemento         esperado False · por pares False · tu cura False
+repetido en los extremos esperado True  · por pares True  · tu cura True
+
+//si bien los resultandos son los mismos para la ejecuccion de cualquiera de los metodos 
+//para las mismas caractarisiticas cantidad , orden y complejidad 
+// se valorara mas la velocidad de ejeccion 
+
+//realizando calculos se tiene que 
+//Por ejemplo , para caso mas pesado se tiene 80.000 elementos:
+
+//lento O(n²): ≈ 3.199.960.000 comparaciones.
+//for (int i = 0; i < carnets.Length; i++)
+//            for (int j = i + 1; j < carnets.Length; j++)
+//                if (carnets[i] == carnets[j]) return true;
+//        return false;
+// ya que evalua cada elemento por el siguiente el nro de comparaciones = n * (n - 1) // 2
+
+//#la cura O(n): ≈ 80.000 operaciones por el uso set lo convierte en la mejor opccion para este caso.
