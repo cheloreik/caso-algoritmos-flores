@@ -1,0 +1,19 @@
+// PARCIAL 1 · VARIANTE A — "Registro de carnets"
+// Problema: dada una lista de carnets, ¿hay alguno repetido?
+// La función HayRepetidosPorPares es CORRECTA pero LENTA. Tu trabajo: analizarla, CURARLA (escribir una
+// versión que cueste menos), medir las dos y elegir. Puedes usar este archivo tal cual (si tienes .NET)
+// o portar todo a TU lenguaje.
+
+
+//se llevo al lengua Python la misma codificacion
+// si generamos una lista de 100000 o 50000 80000 datos desordenados sin repertirce y desordenados siendo el peor 
+// ensenario donde no se encuentre ninguno 
+// Solución ACTUAL (lenta): comparar cada carnet con todos los que le siguen.
+ 
+
+ hay_repetidos_por_pares()
+ // tiene ciclos que se llama asi mismos siendo recursivos lo que lo volvera mas lento 
+ // amedidaa que se tenga mas datos para comparar 
+ // pimera vista se puede ver que el metodo lento al tener dos ciclos FOR 
+ // siendo que se evalauaran cada uno de sus elementos 
+// Para 10000  Realizaria unas 49,995,000 comparaciones para terminar los dos FOR
