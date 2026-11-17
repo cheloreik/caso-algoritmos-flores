@@ -1,0 +1,5 @@
+// PARCIAL 1 · VARIANTE A — "Registro de carnets"
+// Problema: dada una lista de carnets, ¿hay alguno repetido?
+// La función HayRepetidosPorPares es CORRECTA pero LENTA. Tu trabajo: analizarla, CURARLA (escribir una
+// versión que cueste menos), medir las dos y elegir. Puedes usar este archivo tal cual (si tienes .NET)
+// o portar todo a TU lenguaje.
