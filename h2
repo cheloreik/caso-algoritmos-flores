@@ -35,7 +35,8 @@ clase 19.11.2026
 
 
 Si necesito un orden por Órdenes entre dos números de operación.
-
+Se eligió un Árbol Binario de Búsqueda Balanceado (AVL) utilizando como clave el Número de Orden ACH, ya que el proceso maneja millones de transacciones 
+y requiere búsquedas rápidas, inserciones continuas y consultas ordenadas por número de operación
 
                  14262611192684124676
                 /                     \
@@ -44,4 +45,4 @@ Si necesito un orden por Órdenes entre dos números de operación.
       ...      ...                 ...     ...
 
 
-log₂(1.000.000) ≈ 20
+log₂(1.000.000) ≈ 20 comparaciones y es mucho mas coveniente 
