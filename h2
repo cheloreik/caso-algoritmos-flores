@@ -1,1 +1,47 @@
+el registro de las cantidades de transacciones diaras supera los millones (el peor de lo casos es SABADOS) 
+Num. orden ACH,Fecha cámara,Originante,Destinatario,Tipo documento,Num. originante,Num. destinatario,Codigo moneda,Importe,Etapa,Estado,Error,Num. intentos envio a originante,Num. intentos envio a destinatario,Tipo orden,Inicio,Fin,Tipo cuenta origen,Tipo cuenta destino,Ciudad origen,Ciudad destino,Codigo Procedimiento,Tipo
+14262611192684124676,2026-11-19 00:00:00.0,1005,1017,PRIVADO,10051126111900691021,101726111907995339,BOB,50,RESPUESTAORIGEN,ACEP,0000,0,1,200,2026-11-19 14:49:59.994,2026-11-19 14:50:03.125477,CMOVILO,CCAD,LPZ,TRI,50,SIMPLE
 
+la codificacion del Nro orden es 
+ctante  fecha   correlativo
+1426-26/11/19-2684124676
+
+la operacion que se realiza es 
+ACCL bancarios ACH. 
+Reportes internos del sistema. mayores con resgistros 
+Confirmaciones de transferencia (ach aceptadas)
+
+
+
+OPEACIONES 
+el reporte descargado no es correlativo aun cuando se descarga hora
+14262611192676742379,2026-11-19 00:00:00.0,1005,1017,PRIVADO,10051126111900522227,101726111907728875,BOB,34,RESPUESTAORIGEN,ACEP,0000,0,1,200,2026-11-19 12:49:59.941,2026-11-19 12:50:00.414338,CMOVILO,CCAD,LPZ,POT,50,SIMPLE
+14262611192676795650,2026-11-19 00:00:00.0,1005,1017,PRIVADO,10051126111900522226,101726111907728872,BOB,20,RESPUESTAORIGEN,ACEP,0000,0,1,200,2026-11-19 12:49:59.898,2026-11-19 12:50:00.415946,CMOVILO,CCAD,LPZ,LPZ,50,SIMPLE
+14262611192676795642,2026-11-19 00:00:00.0,1014,1017,PRIVADO,10142026111912497709,101726111907728873,BOB,30,RESPUESTAORIGEN,ACEP,0000,0,1,200,2026-11-19 12:49:59.892,2026-11-19 12:50:00.406327,CMOVILO,CCAD,SCZ,LPZ,50,SIMPLE
+14262611192676742344,2026-11-19 00:00:00.0,1014,1017,PRIVADO,10142026111912497705,101726111907728871,BOB,20,RESPUESTAORIGEN,ACEP,0000,0,1,200,2026-11-19 12:49:59.808,2026-11-19 12:50:00.101418,CCAO,CCAD,SCZ,LPZ,50,SIMPLE
+
+
+Operación	Frecuencia
+Buscar una transferencia por referencia ACH  ->	Muchísimas
+Comparar extracto vs sistema interno ->	Muchísimas
+
+
+la estructura de lo resulve recorrer por Orden supeando la parte del correlativo si es conveniente usar le reash
+
+
+
+
+clase 19.11.2026 
+
+
+Si necesito un orden por Órdenes entre dos números de operación.
+
+
+                 14262611192684124676
+                /                     \
+14262611192684124000        14262611192684125000
+          /    \                      /     \
+      ...      ...                 ...     ...
+
+
+log₂(1.000.000) ≈ 20
