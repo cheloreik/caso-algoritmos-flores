@@ -1,0 +1,15 @@
+C:\Users\HP\Documents\ubi\corregido\Sistema-comedor\caso-algoritmos-flores\parcial2\PruebaIngenuo\bin\Debug\net8.0\PruebaIngenuo.exe
+C:\Users\HP\Documents\ubi\corregido\Sistema-comedor\caso-algoritmos-flores\parcial2\PruebaIngenuo\bin\Debug\net8.0\PruebaIngenuo.deps.json
+C:\Users\HP\Documents\ubi\corregido\Sistema-comedor\caso-algoritmos-flores\parcial2\PruebaIngenuo\bin\Debug\net8.0\PruebaIngenuo.runtimeconfig.json
+C:\Users\HP\Documents\ubi\corregido\Sistema-comedor\caso-algoritmos-flores\parcial2\PruebaIngenuo\bin\Debug\net8.0\PruebaIngenuo.dll
+C:\Users\HP\Documents\ubi\corregido\Sistema-comedor\caso-algoritmos-flores\parcial2\PruebaIngenuo\bin\Debug\net8.0\PruebaIngenuo.pdb
+C:\Users\HP\Documents\ubi\corregido\Sistema-comedor\caso-algoritmos-flores\parcial2\PruebaIngenuo\obj\Debug\net8.0\PruebaIngenuo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Documents\ubi\corregido\Sistema-comedor\caso-algoritmos-flores\parcial2\PruebaIngenuo\obj\Debug\net8.0\PruebaIngenuo.AssemblyInfoInputs.cache
+C:\Users\HP\Documents\ubi\corregido\Sistema-comedor\caso-algoritmos-flores\parcial2\PruebaIngenuo\obj\Debug\net8.0\PruebaIngenuo.AssemblyInfo.cs
+C:\Users\HP\Documents\ubi\corregido\Sistema-comedor\caso-algoritmos-flores\parcial2\PruebaIngenuo\obj\Debug\net8.0\PruebaIngenuo.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\ubi\corregido\Sistema-comedor\caso-algoritmos-flores\parcial2\PruebaIngenuo\obj\Debug\net8.0\PruebaIngenuo.sourcelink.json
+C:\Users\HP\Documents\ubi\corregido\Sistema-comedor\caso-algoritmos-flores\parcial2\PruebaIngenuo\obj\Debug\net8.0\PruebaIngenuo.dll
+C:\Users\HP\Documents\ubi\corregido\Sistema-comedor\caso-algoritmos-flores\parcial2\PruebaIngenuo\obj\Debug\net8.0\refint\PruebaIngenuo.dll
+C:\Users\HP\Documents\ubi\corregido\Sistema-comedor\caso-algoritmos-flores\parcial2\PruebaIngenuo\obj\Debug\net8.0\PruebaIngenuo.pdb
+C:\Users\HP\Documents\ubi\corregido\Sistema-comedor\caso-algoritmos-flores\parcial2\PruebaIngenuo\obj\Debug\net8.0\PruebaIngenuo.genruntimeconfig.cache
+C:\Users\HP\Documents\ubi\corregido\Sistema-comedor\caso-algoritmos-flores\parcial2\PruebaIngenuo\obj\Debug\net8.0\ref\PruebaIngenuo.dll

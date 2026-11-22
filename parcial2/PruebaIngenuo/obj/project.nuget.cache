@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "/DSvB8rNFjrf5g0q5eCbbEOWnAaC8N9FwXwHXxxof5PHVo1nO5pw0a8QrniSlcuk13y/HnYu7ruSzrwbaCsvww==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\HP\\Documents\\ubi\\corregido\\Sistema-comedor\\caso-algoritmos-flores\\parcial2\\PruebaIngenuo\\PruebaIngenuo.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://api.nuget.org/v3/index.json'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
+}
