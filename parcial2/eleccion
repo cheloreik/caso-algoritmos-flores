@@ -1,0 +1,35 @@
+// MARCELO FELIX FLORES NINA
+
+
+// PARCIAL 2 · VARIANTE B — "Pedidos de una pastelería"
+// Caso: pedidos que llegan con un PLAZO en minutos (el menor plazo es el más urgente) y se preparan del plazo más
+// corto al más largo; si dos tienen el mismo plazo, se prepara primero el que llegó antes.
+// ReceptorIngenuo es CORRECTO pero LENTO (usa una lista simple). Tu trabajo: elegir la estructura que conviene,
+// APLICARLA en ReceptorMejorado, medir la diferencia y justificar tu elección.
+// el ejemplo 
+
+Torta      120
+Galletas    30 | este tendria que ser el mejor 
+Pan        120
+Brazo       60
+
+    public string? PrepararSiguiente()
+    {
+        if (_lista.Count == 0) return null;
+        int mejor = 0;
+        for (int i = 1; i < _lista.Count; i++)
+        {
+            var p = _lista[i]; var m = _lista[mejor];     // si comparamos a los candidatos 
+            //  30 < 120
+            if (p.Plazo < m.Plazo || (p.Plazo == m.Plazo && p.Llegada < m.Llegada)) mejor = i;
+        }
+        string nombre = _lista[mejor].Nombre;
+        _lista.RemoveAt(mejor);
+        return nombre;     // sacamos al mejor 
+    }
+
+
+ lo que quedarian pedientes 
+Torta      120
+Pan        120
+Brazo       60

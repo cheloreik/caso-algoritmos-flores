@@ -1,0 +1,17 @@
+// MARCELO FELIX FLORES NINA 
+
+// PARCIAL 2 · VARIANTE B — "Pedidos de una pastelería"
+// Caso: pedidos que llegan con un PLAZO en minutos (el menor plazo es el más urgente) y se preparan del plazo más
+// corto al más largo; si dos tienen el mismo plazo, se prepara primero el que llegó antes.
+// ReceptorIngenuo es CORRECTO pero LENTO (usa una lista simple). Tu trabajo: elegir la estructura que conviene,
+// APLICARLA en ReceptorMejorado, medir la diferencia y justificar tu elección.
+
+
+ejecutando el codigo se tiene lo siguiente 
+ReceptorIngenuo : 11 de 11 pasos correctos
+ReceptorMejorado: (sin escribir todavía)
+Ingenuo con 10.000 pedidos: 6602 ms (una sola medición: no es evidencia)
+
+ReceptorIngenuo : 11 de 11 pasos correctos
+ReceptorMejorado: (sin escribir todavía)
+Ingenuo con 10.000 pedidos: 7413 ms (una sola medición: no es evidencia)
