@@ -44,14 +44,35 @@ public sealed class ReceptorIngenuo : IReceptorPedidos
 }
 
 // ---------- TU SOLUCIÓN: elige la(s) estructura(s) y escríbela aquí ----------
+// --- Se usara usar hash y Una PriorityQueue (o cola de prioridad) es una estructura de datos en la que cada elemento tiene una prioridad asociada 
+// --- y se extrae primero según esa prioridad, en lugar de seguir el orden de llegada (FIFO) de una cola normal
 public sealed class ReceptorMejorado : IReceptorPedidos
 {
-    public void Registrar(string pedido, int plazoMinutos) => throw new NotImplementedException("Escribe aquí tu solución.");
-    public string? PrepararSiguiente() => throw new NotImplementedException();
-    public bool EstaPendiente(string pedido) => throw new NotImplementedException();
-    public int Pendientes => throw new NotImplementedException();
-}
+    private readonly PriorityQueue<Pedido, (int plazo, int llegada)> _cola = new();
+    private readonly HashSet<string> _pendientes = new();
+    private int _llegadas;
+    public void Registrar(string pedido, int plazoMinutos)
+    {
+        var nuevo = new Pedido(pedido, plazoMinutos, _llegadas++);
 
+        _cola.Enqueue(
+            nuevo,
+            (nuevo.Plazo, nuevo.Llegada)
+        );
+
+        _pendientes.Add(pedido);
+    }
+
+    public string? PrepararSiguiente()
+    {if (_cola.Count == 0)
+            return null;
+        Pedido pedido = _cola.Dequeue();
+        _pendientes.Remove(pedido.Nombre);
+        return pedido.Nombre;}
+    public bool EstaPendiente(string pedido)
+    {return _pendientes.Contains(pedido);}
+    public int Pendientes
+    {get { return _cola.Count; }}}
 public static class Programa
 {
     // El guion de pruebas: cada paso es (operación, argumento, plazo, resultado esperado).

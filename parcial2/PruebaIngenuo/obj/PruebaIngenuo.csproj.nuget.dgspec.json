@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\Documents\\ubi\\corregido\\Sistema-comedor\\caso-algoritmos-flores\\parcial2\\PruebaIngenuo\\PruebaIngenuo.csproj": {}
+    "C:\\Users\\HP\\Documents\\ubi\\corregido\\Sistema-comedor\\caso-algoritmos-flores\\parcial2\\pruebaIngenuo\\PruebaIngenuo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\Documents\\ubi\\corregido\\Sistema-comedor\\caso-algoritmos-flores\\parcial2\\PruebaIngenuo\\PruebaIngenuo.csproj": {
+    "C:\\Users\\HP\\Documents\\ubi\\corregido\\Sistema-comedor\\caso-algoritmos-flores\\parcial2\\pruebaIngenuo\\PruebaIngenuo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Documents\\ubi\\corregido\\Sistema-comedor\\caso-algoritmos-flores\\parcial2\\PruebaIngenuo\\PruebaIngenuo.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Documents\\ubi\\corregido\\Sistema-comedor\\caso-algoritmos-flores\\parcial2\\pruebaIngenuo\\PruebaIngenuo.csproj",
         "projectName": "PruebaIngenuo",
-        "projectPath": "C:\\Users\\HP\\Documents\\ubi\\corregido\\Sistema-comedor\\caso-algoritmos-flores\\parcial2\\PruebaIngenuo\\PruebaIngenuo.csproj",
+        "projectPath": "C:\\Users\\HP\\Documents\\ubi\\corregido\\Sistema-comedor\\caso-algoritmos-flores\\parcial2\\pruebaIngenuo\\PruebaIngenuo.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Documents\\ubi\\corregido\\Sistema-comedor\\caso-algoritmos-flores\\parcial2\\PruebaIngenuo\\obj\\",
+        "outputPath": "C:\\Users\\HP\\Documents\\ubi\\corregido\\Sistema-comedor\\caso-algoritmos-flores\\parcial2\\pruebaIngenuo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
