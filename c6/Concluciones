@@ -1,0 +1,34 @@
+Marcelo felix flores nina
+
+            RESULTADOS DE LA COMPETENCIA
+n          | Algoritmo          | Promedio (3 corridas)
+-------------------------------------------------------
+
+10000      | Inserción          | 1696.35 ms
+10000      | MergeSort          | 16.21 ms
+10000      | QuickSort          | 12.47 ms
+10000      | Timsort (Python)   | 1.11 ms
+-------------------------------------------------------
+20000      | Inserción          | 6906.44 ms
+20000      | MergeSort          | 35.71 ms
+20000      | QuickSort          | 28.28 ms
+20000      | Timsort (Python)   | 2.68 ms
+-------------------------------------------------------
+
+40000      | Inserción          | 29156.93 ms
+40000      | MergeSort          | 76.84 ms
+40000      | QuickSort          | 70.30 ms
+40000      | Timsort (Python)   | 6.06 ms
+-------------------------------------------------------
+
+80000      | Inserción          | 140354.43 ms
+80000      | MergeSort          | 165.30 ms
+80000      | QuickSort          | 130.28 ms
+80000      | Timsort (Python)   | 16.91 ms
+-------------------------------------------------------
+
+
+se puede decir que en lenguaje de python nativamente es mas Optimo 
+realiza el Ordenamiento sin importar la cantidad de datos es siempre mejor 
+usar Timsort seria la opccion optima para la tarea 
+
