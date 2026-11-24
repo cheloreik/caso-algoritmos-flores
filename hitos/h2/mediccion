@@ -1,0 +1,42 @@
+Marcelo felix flores nina 
+Cantidad de correlativos: 10,001
+
+Correlativo buscado: 2684124676
+
+Búsqueda Lineal
+Posición: 10000
+Tiempo: 1.503700 ms
+
+Búsqueda Binaria
+Posición: 10000
+Tiempo: 0.011700 ms
+
+Cantidad de correlativos: 50,001
+
+Correlativo buscado: 2684124676
+
+Búsqueda Lineal
+Posición: 50000
+Tiempo: 11.999500 ms
+
+Búsqueda Binaria
+Posición: 50000
+Tiempo: 0.013800 ms
+
+Cantidad de correlativos: 80,001
+
+Correlativo buscado: 2684124676
+
+Búsqueda Lineal
+Posición: 80000
+Tiempo: 31.239200 ms
+
+Búsqueda Binaria
+Posición: 80000
+Tiempo: 0.014200 ms
+
+la busqueda con el arbol binari siempre no crece mucho por mas que cantidad de datos que manejen 
+a deferencia de la linea que paso de 1 a 11 a 31 ms demanera que el tiempo creece con la cantidad
+de informacion a revisar 
+
+probando cambioS 
