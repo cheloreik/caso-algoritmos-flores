@@ -11,26 +11,14 @@ Los errores más comunes son referencias incompletas, montos diferentes o regist
 El objetivo es automatizar la comparación de registros para reducir tiempos y errores.
 Se espera disminuir el tiempo de conciliación a menos de 30 minutos diarios.
 
+La Cámara de Compensación tiene como participantes a las siguientes entidades del sistema financiero de Bolivia: 
+todos los bancos, cooperativas y entidades de intermediacion financiera
+
+
 MUESTRA DE DATOS REALES (FORMATO DE EJEMPLO)
 
-Fecha       | Referencia     | Banco Origen     | Banco Destino    | Moneda | Monto   | Estado
-2026-11-01  | SWF000001      | Banco Pichincha  | CaixaBank        | USD    | 1500.50 | Conciliado
-2026-11-01  | SWF000002      | Banco do Brasil  | Banco Pichincha  | USD    | 2350.00 | Pendiente
-2026-11-01  | SWF000003      | CaixaBank        | Banco Pichincha  | EUR    | 890.45  | Conciliado
-2026-11-01  | SWF000004      | Banco Pichincha  | Banco do Brasil  | USD    | 760.30  | Pendiente
-2026-11-01  | SWF000005      | Banco Pichincha  | CaixaBank        | USD    | 1200.00 | Conciliado
-2026-11-02  | SWF000006      | Banco do Brasil  | Banco Pichincha  | USD    | 3540.80 | Conciliado
-2026-11-02  | SWF000007      | CaixaBank        | Banco Pichincha  | EUR    | 620.25  | Pendiente
-2026-11-02  | SWF000008      | Banco Pichincha  | CaixaBank        | USD    | 980.75  | Conciliado
-2026-11-02  | SWF000009      | Banco do Brasil  | Banco Pichincha  | USD    | 1800.00 | Conciliado
-2026-11-02  | SWF000010      | Banco Pichincha  | CaixaBank        | USD    | 2475.10 | Pendiente
-2026-11-03  | SWF000011      | CaixaBank        | Banco Pichincha  | EUR    | 510.00  | Conciliado
-2026-11-03  | SWF000012      | Banco Pichincha  | Banco do Brasil  | USD    | 3340.50 | Pendiente
-2026-11-03  | SWF000013      | Banco do Brasil  | Banco Pichincha  | USD    | 1700.75 | Conciliado
-2026-11-03  | SWF000014      | Banco Pichincha  | CaixaBank        | USD    | 2950.00 | Conciliado
-2026-11-03  | SWF000015      | CaixaBank        | Banco Pichincha  | EUR    | 430.25  | Pendiente
-2026-11-04  | SWF000016      | Banco Pichincha  | CaixaBank        | USD    | 860.45  | Conciliado
-2026-11-04  | SWF000017      | Banco do Brasil  | Banco Pichincha  | USD    | 1425.60 | Pendiente
-2026-11-04  | SWF000018      | Banco Pichincha  | Banco do Brasil  | USD    | 3780.00 | Conciliado
-2026-11-04  | SWF000019      | CaixaBank        | Banco Pichincha  | EUR    | 990.15  | Conciliado
-2026-11-04  | SWF000020      | Banco Pichincha  | CaixaBank        | USD    | 1105.30 | Pendiente
+nro de orden ach 
+14262611192676742379,2026-11-19 00:00:00.0,1005,1017,PRIVADO,10051126111900522227,101726111907728875,BOB,34,RESPUESTAORIGEN,ACEP,0000,0,1,200,2026-11-19 12:49:59.941,2026-11-19 12:50:00.414338,CMOVILO,CCAD,LPZ,POT,50,SIMPLE
+14262611192676795650,2026-11-19 00:00:00.0,1005,1017,PRIVADO,10051126111900522226,101726111907728872,BOB,20,RESPUESTAORIGEN,ACEP,0000,0,1,200,2026-11-19 12:49:59.898,2026-11-19 12:50:00.415946,CMOVILO,CCAD,LPZ,LPZ,50,SIMPLE
+14262611192676795642,2026-11-19 00:00:00.0,1014,1017,PRIVADO,10142026111912497709,101726111907728873,BOB,30,RESPUESTAORIGEN,ACEP,0000,0,1,200,2026-11-19 12:49:59.892,2026-11-19 12:50:00.406327,CMOVILO,CCAD,SCZ,LPZ,50,SIMPLE
+14262611192676742344,2026-11-19 00:00:00.0,1014,1017,PRIVADO,10142026111912497705,101726111907728871,BOB,20,RESPUESTAORIGEN,ACEP,0000,0,1,200,2026-11-19 12:49:59.808,2026-11-19 12:50:00.101418,CCAO,CCAD,SCZ,LPZ,50,SIMPLE

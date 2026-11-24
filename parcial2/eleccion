@@ -25,11 +25,66 @@ Brazo       60
         }
         string nombre = _lista[mejor].Nombre;
         _lista.RemoveAt(mejor);
-        return nombre;     // sacamos al mejor 
+        return nombre;     // sacamos al que tiene mas prioridad GALLETAS
     }
 
 
- lo que quedarian pedientes 
+//lo que quedarian pedientes 
 Torta      120
 Pan        120
 Brazo       60
+
+
+
+// ---------- TU SOLUCIÓN: elige la(s) estructura(s) y escríbela aquí ----------
+public sealed class ReceptorMejorado : IReceptorPedidos
+{
+    public void Registrar(string pedido, int plazoMinutos) => throw new NotImplementedException("Escribe aquí tu solución.");
+    public string? PrepararSiguiente() => throw new NotImplementedException();
+    public bool EstaPendiente(string pedido) => throw new NotImplementedException();
+    public int Pendientes => throw new NotImplementedException();
+}
+
+
+
+
+public sealed class ReceptorMejorado : IReceptorPedidos
+{
+    private readonly PriorityQueue<Pedido, (int plazo, int llegada)> _cola = new();
+    private readonly HashSet<string> _pendientes = new();
+    private int _llegadas;
+
+    public void Registrar(string pedido, int plazoMinutos)
+    {
+        var nuevo = new Pedido(pedido, plazoMinutos, _llegadas++);
+
+        _cola.Enqueue(
+            nuevo,
+            (nuevo.Plazo, nuevo.Llegada)
+        );
+
+        _pendientes.Add(pedido);
+    }
+
+    public string? PrepararSiguiente()
+    {
+        if (_cola.Count == 0)
+            return null;
+
+        Pedido pedido = _cola.Dequeue();
+
+        _pendientes.Remove(pedido.Nombre);
+
+        return pedido.Nombre;
+    }
+
+    public bool EstaPendiente(string pedido)
+    {
+        return _pendientes.Contains(pedido);
+    }
+
+    public int Pendientes
+    {
+        get { return _cola.Count; }
+    }
+}

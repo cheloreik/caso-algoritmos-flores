@@ -8,6 +8,7 @@
 
 
 ejecutando el codigo se tiene lo siguiente 
+pruebas 
 ReceptorIngenuo : 11 de 11 pasos correctos
 ReceptorMejorado: (sin escribir todavía)
 Ingenuo con 10.000 pedidos: 6602 ms (una sola medición: no es evidencia)
@@ -15,3 +16,49 @@ Ingenuo con 10.000 pedidos: 6602 ms (una sola medición: no es evidencia)
 ReceptorIngenuo : 11 de 11 pasos correctos
 ReceptorMejorado: (sin escribir todavía)
 Ingenuo con 10.000 pedidos: 7413 ms (una sola medición: no es evidencia)
+
+
+
+lo ideal seria llevar todos los procedimientos 
+Operación       	Ingenuo	Mejorado
+Registrar	        O(1)	O(log n)
+PrepararSiguiente	O(n)	O(log n)
+EstaPendiente	    O(n)	O(1)
+
+
+usando  private readonly PriorityQueue<Pedido, (int plazo, int llegada)> _cola = new();
+Galletas  (30,1)
+Torta     (120,0)
+Pan       (120,2)
+
+private readonly HashSet<string> _pendientes = new();
+{
+   "Torta",
+   "Galletas",
+   "Pan"
+}
+
+
+
+ReceptorIngenuo : 11 de 11 pasos correctos
+ReceptorMejorado: 11 de 11 pasos correctos
+Ingenuo con 10.000 pedidos: 7845 ms (una sola medición: no es evidencia)
+
+
+ReceptorIngenuo: 11 de 11 pasos correctos
+ReceptorMejorado: 11 de 11 pasos correctos
+
+
+
+----- COMPARACIÓN DE TIEMPOS -----
+
+Cantidad: 10,000 - 50.000 y 80000
+
+Ingenuo con 10.000 pedidos: 8500 ms
+Mejorado con 10.000 pedidos: 30 ms
+
+Ingenuo con 50.000 pedidos: 220500 ms
+Mejorado con 50.000 pedidos: 120 ms
+
+Ingenuo con 80.000 pedidos: 560000 ms
+Mejorado con 80.000 pedidos: 200 ms

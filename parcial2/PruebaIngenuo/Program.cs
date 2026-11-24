@@ -137,3 +137,37 @@ public static class Programa
         Console.WriteLine($"Ingenuo con 10.000 pedidos: {reloj.ElapsedMilliseconds} ms (una sola medición: no es evidencia)");
     }
 }
+
+
+public static void Main()
+{
+    Probar("ReceptorIngenuo ", new ReceptorIngenuo());
+    Probar("ReceptorMejorado", new ReceptorMejorado());
+
+    int[] casos = { 10000, 50000, 80000 };
+
+    foreach (int n in casos)
+    {
+        var reloj = Stopwatch.StartNew();
+
+        EjecutarCarga(new ReceptorIngenuo(), n);
+
+        reloj.Stop();
+
+        Console.WriteLine(
+            $"Ingenuo con {n:N0} pedidos: {reloj.ElapsedMilliseconds} ms"
+        );
+
+        reloj.Restart();
+
+        EjecutarCarga(new ReceptorMejorado(), n);
+
+        reloj.Stop();
+
+        Console.WriteLine(
+            $"Mejorado con {n:N0} pedidos: {reloj.ElapsedMilliseconds} ms"
+        );
+
+        Console.WriteLine();
+    }
+}
