@@ -11,11 +11,10 @@ marcelo felix flores nina
 no es conveniente utilizar el codigo voraz ya que se elege el paquete con mas ganancia o realizar ganancia X Peso 
 NO garantiza una conbinacion OPTIMA 
 el algoritmo evalua dos posibilidades no incluirlo / incluirlo si la capacidad es suficiente
-la estructura de ingenuo es una list
-
-la mejora se usara un hashset
+la estructura de ingenuo es una list Probando todas las combinaciones posibles de paquetes (voraz) siendo que no siempre puede estar en lo correcto
+pero la mejora se usara un hashset ya que se guardan resultado (costo)
 
 - ¿Qué pasaría con tu solución si la capacidad fuera **1.000.000.000 de kg**? Explícalo (1,5)
 si la capacidad fuera tan grande la relacion costo beneficio se perderia ya que usar al tener tanta capacidad sera indistito la seleccion de paquetes 
-porque se prodran llevar todos 
+porque se prodran llevar todos, y no importaran si se cargo de manera optima o no 
 
