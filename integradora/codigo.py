@@ -1,8 +1,12 @@
 from dataclasses import dataclass
-from typing import List, Tuple
-import time
+from typing import List
 import random
+import time
 
+
+# -------------------------------------------------
+# MODELO
+# -------------------------------------------------
 
 @dataclass
 class Paquete:
@@ -12,6 +16,7 @@ class Paquete:
 
 
 class IPlanificador:
+
     def elegir(self, paquetes: List[Paquete], capacidad_kg: int):
         raise NotImplementedError
 
@@ -20,8 +25,10 @@ class IPlanificador:
 
 
 # -------------------------------------------------
-# SOLUCIÓN INGENUA (2^n)
+# PLANIFICADOR INGENUO
+# Complejidad O(2^n)
 # -------------------------------------------------
+
 class PlanificadorIngenuo(IPlanificador):
 
     def __init__(self):
@@ -34,16 +41,17 @@ class PlanificadorIngenuo(IPlanificador):
         mejor_mascara = 0
 
         for mascara in range(1 << n):
-            kg = 0
-            ganancia = 0
+
+            peso_total = 0
+            ganancia_total = 0
 
             for i in range(n):
                 if mascara & (1 << i):
-                    kg += paquetes[i].kg
-                    ganancia += paquetes[i].ganancia
+                    peso_total += paquetes[i].kg
+                    ganancia_total += paquetes[i].ganancia
 
-            if kg <= capacidad_kg and ganancia > mejor:
-                mejor = ganancia
+            if peso_total <= capacidad_kg and ganancia_total > mejor:
+                mejor = ganancia_total
                 mejor_mascara = mascara
 
         self.elegidos = []
@@ -59,9 +67,11 @@ class PlanificadorIngenuo(IPlanificador):
 
 
 # -------------------------------------------------
-# SOLUCIÓN MEJORADA (Programación Dinámica)
-# Complejidad: O(n * capacidad)
+# PLANIFICADOR MEJORADO
+# Programación Dinámica
+# Complejidad O(n * capacidad)
 # -------------------------------------------------
+
 class PlanificadorMejorado(IPlanificador):
 
     def __init__(self):
@@ -71,9 +81,11 @@ class PlanificadorMejorado(IPlanificador):
 
         n = len(paquetes)
 
-        dp = [[0] * (capacidad_kg + 1) for _ in range(n + 1)]
+        dp = [[0 for _ in range(capacidad_kg + 1)]
+              for _ in range(n + 1)]
 
         for i in range(1, n + 1):
+
             peso = paquetes[i - 1].kg
             valor = paquetes[i - 1].ganancia
 
@@ -87,20 +99,24 @@ class PlanificadorMejorado(IPlanificador):
                 else:
                     dp[i][cap] = dp[i - 1][cap]
 
-        # Reconstruir solución
+        # Reconstrucción de la solución óptima
         codigos = []
-        cap = capacidad_kg
-
         self.elegidos.clear()
+
+        cap = capacidad_kg
 
         for i in range(n, 0, -1):
 
-            if dp[i][cap] != dp[i - 1]paquete = paquetes[i - 1]
+            if dp[i][cap] != dp[i - 1][cap]:
+
+                paquete = paquetes[i - 1]
 
                 codigos.append(paquete.codigo)
                 self.elegidos.add(paquete.codigo)
 
                 cap -= paquete.kg
+
+        codigos.reverse()
 
         return dp[n][capacidad_kg], codigos
 
@@ -109,16 +125,16 @@ class PlanificadorMejorado(IPlanificador):
 
 
 # -------------------------------------------------
-# DATOS DE PRUEBA
+# CASOS DE PRUEBA
 # -------------------------------------------------
+
 def lote(*datos):
     return [Paquete(c, kg, g) for c, kg, g in datos]
 
 
-CASOS = [
+casos = [
     (
-        "el voraz se equivoca",
-        lote(
+        "el     lote(
             ("P1", 10, 60),
             ("P2", 20, 100),
             ("P3", 30, 120)
@@ -188,12 +204,13 @@ CASOS = [
 # -------------------------------------------------
 # PRUEBAS
 # -------------------------------------------------
+
 def probar(titulo, fabrica):
 
     bien = 0
     total = 0
 
-    for que, paquetes, capacidad, esperada, codigos in CASOS:
+    for que, paquetes, capacidad, esperada, codigos in casos:
 
         plan = fabrica()
 
@@ -201,12 +218,12 @@ def probar(titulo, fabrica):
 
         total += 1
 
-        ok = (
+        correcto = (
             ganancia == esperada and
             sorted(elegidos) == sorted(codigos)
         )
 
-        if ok:
+        if correcto:
             bien += 1
         else:
             print(
@@ -216,7 +233,7 @@ def probar(titulo, fabrica):
             )
 
     p = fabrica()
-    p.elegir(CASOS[0][1], CASOS[0][2])
+    p.elegir(casos[0][1], casos[0][2])
 
     total += 2
 
@@ -236,6 +253,7 @@ def probar(titulo, fabrica):
 # -------------------------------------------------
 # CARGA
 # -------------------------------------------------
+
 def ejecutar_carga(plan, n):
 
     random.seed(n)
@@ -259,6 +277,7 @@ def ejecutar_carga(plan, n):
 # -------------------------------------------------
 # MAIN
 # -------------------------------------------------
+
 if __name__ == "__main__":
 
     probar(
