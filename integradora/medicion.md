@@ -10,7 +10,7 @@ PlanificadorMejorado: 8 de 8 pruebas correctas
 Ingenuo con 18 paquetes: 101 ms (una sola medición: no es evidencia)
 
 
-realizando una compracion 
+realizando una compracion para n+2, n+4, n+6* 
 1era corrida
 PlanificadorIngenuo : 8 de 8 pruebas correctas
 PlanificadorMejorado: 8 de 8 pruebas correctas
