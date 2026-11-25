@@ -224,7 +224,85 @@ public static class Programa
 
         return ganancia;
     }
+// para los promedios 
+private static double MedirPromedio(
+    Func<IPlanificador> fabrica,
+    int n)
+{
+    // Calentamiento
+    EjecutarCarga(fabrica(), n);
 
+    long total = 0;
+
+    for (int i = 0; i < 3; i++)
+    {
+        var reloj = Stopwatch.StartNew();
+
+        EjecutarCarga(fabrica(), n);
+
+        reloj.Stop();
+
+        total += reloj.ElapsedMilliseconds;
+    }
+
+    return total / 3.0;
+}
+
+private static void MedicionFormal()
+{
+    Console.WriteLine();
+    Console.WriteLine("MEDICION FORMAL");
+    Console.WriteLine("==============================================================");
+    Console.WriteLine(
+        $"{"n",-8} {"Ingenuo(ms)",-15} {"x Ant.",-10} {"Mejorado(ms)",-15} {"x Ant.",-10}");
+    Console.WriteLine("--------------------------------------------------------------");
+
+    int[] tamanios = { 18, 20, 22, 24 };
+
+    double anteriorIngenuo = 0;
+    double anteriorMejorado = 0;
+
+    foreach (int n in tamanios)
+    {
+        // Verificación de ganancia
+        int gananciaIngenua =
+            EjecutarCarga(new PlanificadorIngenuo(), n);
+
+        int gananciaMejorada =
+            EjecutarCarga(new PlanificadorMejorado(), n);
+
+        if (gananciaIngenua != gananciaMejorada)
+        {
+            Console.WriteLine(
+                $"ERROR: ganancias distintas para n={n}");
+            return;
+        }
+
+        double tIngenuo =
+            MedirPromedio(() => new PlanificadorIngenuo(), n);
+
+        double tMejorado =
+            MedirPromedio(() => new PlanificadorMejorado(), n);
+
+        string factorIngenuo =
+            anteriorIngenuo == 0
+                ? "-"
+                : (tIngenuo / anteriorIngenuo).ToString("0.00");
+
+        string factorMejorado =
+            anteriorMejorado == 0
+                ? "-"
+                : (tMejorado / anteriorMejorado).ToString("0.00");
+
+        Console.WriteLine(
+            $"{n,-8} {tIngenuo,-15:F2} {factorIngenuo,-10} {tMejorado,-15:F2} {factorMejorado,-10}");
+
+        anteriorIngenuo = tIngenuo;
+        anteriorMejorado = tMejorado;
+    }
+
+    Console.WriteLine("==============================================================");
+}
     private static long MedirTiempo(
         IPlanificador plan,
         int n,
@@ -255,9 +333,9 @@ public static class Programa
         Console.WriteLine($"{"Paquetes",-12} {"Ingenuo(ms)",-15} {"Mejorado(ms)",-15}");
         Console.WriteLine("----------------------------------------------------");
 
-        int[] tamanios = { 18, 20, 22 };
+        int[] tamas =  { 18, 20, 22, 24 };
 
-        foreach (int n in tamanios)
+        foreach (int n in tamas)
         {
             long ingenuo =
                 MedirTiempo(new PlanificadorIngenuo(), n);
@@ -296,5 +374,6 @@ public static class Programa
             $"Ingenuo con 18 paquetes: {reloj.ElapsedMilliseconds} ms");
 
         CompararRendimiento();
+        MedicionFormal();
     }
 }
