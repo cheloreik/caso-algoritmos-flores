@@ -10,3 +10,8 @@ marcelo felix flores nina
 
 no es conveniente utilizar el codigo voraz ya que se elege el paquete con mas ganancia o realizar ganancia X Peso 
 NO garantiza una conbinacion OPTIMA 
+el algoritmo evalua dos posibilidades no incluirlo / incluirlo si la capacidad es suficiente
+la estructura de ingenuo es una list
+
+la mejora se usara un hashset
+

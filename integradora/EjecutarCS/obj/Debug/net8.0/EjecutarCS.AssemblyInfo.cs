@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EjecutarCS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1b6ba4d66cf3ef3944e1628e2a536a9f5f94e62b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f250ec0bbe9ebea1e2936d229a22fb9e5b1e7507")]
 [assembly: System.Reflection.AssemblyProductAttribute("EjecutarCS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EjecutarCS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
