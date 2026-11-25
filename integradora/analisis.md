@@ -15,3 +15,7 @@ la estructura de ingenuo es una list
 
 la mejora se usara un hashset
 
+- ¿Qué pasaría con tu solución si la capacidad fuera **1.000.000.000 de kg**? Explícalo (1,5)
+si la capacidad fuera tan grande la relacion costo beneficio se perderia ya que usar al tener tanta capacidad sera indistito la seleccion de paquetes 
+porque se prodran llevar todos 
+
